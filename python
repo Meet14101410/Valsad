@@ -1,0 +1,19 @@
+def valsad_report():
+    data = {
+        "Name": "Valsad",
+        "District": "Valsad",
+        "State": "Gujarat",
+        "Economic_Drivers": ["Chemicals", "Agriculture", "Paper"],
+        "Famous_Crops": ["Mango (Alphonso)", "Sapota (Chiku)"],
+        "Pincode": 396001
+    }
+
+    print(f"--- Fact Sheet: {data['Name']} ---")
+    for key, value in data.items():
+        if isinstance(value, list):
+            print(f"{key:18}: {', '.join(value)}")
+        else:
+            print(f"{key:18}: {value}")
+
+if __name__ == "__main__":
+    valsad_report()
